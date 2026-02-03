@@ -5,7 +5,7 @@ Sonar allows to scan container image based on a provided SBOM of the image but d
 Create the SBOM for the nginx image using Docker CLI, which under the hood uses Syft:
 
 ```
-docker sbom --format cyclonedx-json --output nginx.cdx.json nginx
+docker scout sbom --format cyclonedx --output nginx.cdx.json nginx
 ```
 
 Then adjust the `sonar-project.properties` file to include the generated SBOM:
